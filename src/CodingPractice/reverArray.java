@@ -1,5 +1,7 @@
 package CodingPractice;
 
+import java.util.Arrays;
+
 public class reverArray {
     static void reverArrayFunction(int [] arr){
         int left = 0;
@@ -15,6 +17,7 @@ public class reverArray {
 
     public static void main(String[] args) {
         int arr [] = {1,2,3,4,5,6,7,8,9};
+        System.out.println("Original array : "+ Arrays.toString(arr));
         reverArrayFunction(arr);
         for(int i = 0; i<arr.length; i++){
             System.out.print(arr[i]+" ");
