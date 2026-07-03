@@ -20,21 +20,50 @@ public class Day_9 {
 //        find(ans+ "V",cr+1,cc,n);
 //    }
 
+
+
+    //LexiGraphcalOrder
+
+//    public static void main(String[] args) {
+//        //
+//        for(int i = 1; i<=9; i++){
+//            create(i, 113);
+//        }
+//    }
+//    public static void create(int num, int n){
+//        if(num>n) return;
+//
+//        System.out.println(num);
+//        num=num*10;
+//
+//        for(int i = 0;i<=9;i++){
+//            create(num+i,n);
+//        }
+//    }
+
     public static void main(String[] args) {
-        //LexiGraphcalOrder
+        char[][] ch = {{' ',' ','x',' '},
+                    {' ',' ',' ',' '},
+                    {' ','x',' ',' '},
+                    {' ',' ',' ',' '}};
 
-        for(int i = 1; i<=9; i++){
-            create(i, 113);
-        }
+        find("",0,0,ch);
     }
-    public static void create(int num, int n){
-        if(num>n) return;
+    public static void find(String ans, int cr, int cc, char [][] ch){
 
-        System.out.println(num);
-        num=num*10;
-
-        for(int i = 0;i<=9;i++){
-            create(num+i,n);
+        if(cr == ch.length-1 && cc == ch[0].length-1){
+            System.out.println(ans);
+            return;
         }
+
+        if(cr >= ch.length || cc >= ch[0].length || ch[cr][cc] == 'x') return;
+
+        //Horizontal
+        find(ans+"H",cr,cc+1,ch);
+
+        //Vertical
+        find(ans+"V",cr+1, cc,ch);
     }
+
+
 }
