@@ -6,9 +6,12 @@ import java.util.List;
 
 public class D10_CombinationSum {
     public static void main(String[] args) {
-        int arr [] = {5,2,3};
-        Arrays.sort(arr);
-        find(0,8,new ArrayList<>(),arr);
+
+        int coin [] = {5,2,3};
+        List<List<Integer>> l = new ArrayList<>();
+        Arrays.sort(coin);
+
+        find(0,8,new ArrayList<>(),coin);
     }
     public static void find(int idx, int target, List<Integer> ans, int coin[]){
         if(target == 0){
