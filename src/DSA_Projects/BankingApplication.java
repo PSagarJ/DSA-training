@@ -1,7 +1,7 @@
 package DSA_Projects;
 
 class Account{
-    int accountNo;
+    final int accountNo = 12369;
     private int amount;
     String name;
 
@@ -31,7 +31,7 @@ public class BankingApplication {
     public static void main(String[] args) {
         Account a1 = new Account();
         a1.name = "Sagar";
-        a1.accountNo = 12369;
+//        a1.accountNo;
 
         a1.deposite(1000);
         a1.deposite(3000);
@@ -40,6 +40,7 @@ public class BankingApplication {
         System.out.println(a1.balance());
 
         a1.withDrawl(500);
+        a1.withDrawl(5000);
         System.out.println("\nTotal remiaining amount after withdrawl >>>>>");
         System.out.println(a1.balance());
     }
