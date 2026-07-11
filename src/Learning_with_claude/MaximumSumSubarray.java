@@ -17,21 +17,6 @@ public class MaximumSumSubarray {
             if(windowSum>maxSum) maxSum = windowSum;
         }
         return maxSum;
-
-
-
-
-//        for(int i = 0; i<=arr.length-k; i++){
-//            int newSum = 0;
-//
-//            for(int j = i; j < i + k; j++){
-//                newSum = newSum+arr[j];
-//            }
-//
-//            if(newSum > maxSum) {
-//                maxSum = newSum;
-//            }
-//        }
     }
 
     public static void main(String[] args) {
